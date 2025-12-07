@@ -42,6 +42,15 @@ Context and knowledge management toolkit:
 **Agents**: context-gatherer, doc-updater, memory-updater, flow-analyst, architecture-investigator
 **Commands**: /context-management:gather
 
+### orchestrator-mode
+Enforces the orchestrator pattern for cleaner context management:
+- Warns when main context attempts direct file edits
+- Encourages delegation to specialized agents
+- Keeps main context focused on orchestration
+
+**Hooks**: PreToolUse (Edit, Write, MultiEdit)
+**Commands**: None (passive hook only)
+
 ## Installation
 
 ```bash

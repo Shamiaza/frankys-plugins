@@ -47,6 +47,16 @@
       },
       "source": "./plugins/context-management",
       "category": "development"
+    },
+    {
+      "name": "orchestrator-mode",
+      "description": "Enforces orchestrator pattern by warning when main context attempts direct file edits",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/orchestrator-mode",
+      "category": "productivity"
     }
   ]
 }

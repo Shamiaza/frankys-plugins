@@ -1,0 +1,8 @@
+{
+  "name": "orchestrator-mode",
+  "version": "1.0.0",
+  "description": "Enforces orchestrator pattern by warning when the main context attempts direct file edits instead of delegating to agents",
+  "author": {
+    "name": "Shamiaza"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "description": "Warns when main context attempts direct file edits - encourages delegation to agents",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": {
+          "tool_name": "Edit"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '⚠️ ORCHESTRATOR MODE: Consider using Task tool with an agent for file edits instead of editing directly. If you ARE an agent, proceed with the edit.'",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "tool_name": "Write"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '⚠️ ORCHESTRATOR MODE: Consider using Task tool with an agent for file writes instead of writing directly. If you ARE an agent, proceed with the write.'",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "tool_name": "MultiEdit"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '⚠️ ORCHESTRATOR MODE: Consider using Task tool with an agent for multi-edits instead of editing directly. If you ARE an agent, proceed with the edit.'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
