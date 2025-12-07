@@ -1,5 +1,5 @@
 {
-  "description": "Warns when main context attempts direct file edits - encourages delegation to agents",
+  "description": "Blocks direct file edits in main context - enforces delegation to agents",
   "hooks": {
     "PreToolUse": [
       {
@@ -9,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '⚠️ ORCHESTRATOR MODE: Consider using Task tool with an agent for file edits instead of editing directly. If you ARE an agent, proceed with the edit.'",
+            "command": "echo '🚫 ORCHESTRATOR MODE: Direct edits are blocked. Use Task tool with an agent instead.' && exit 1",
             "timeout": 5
           }
         ]
@@ -21,7 +21,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '⚠️ ORCHESTRATOR MODE: Consider using Task tool with an agent for file writes instead of writing directly. If you ARE an agent, proceed with the write.'",
+            "command": "echo '🚫 ORCHESTRATOR MODE: Direct writes are blocked. Use Task tool with an agent instead.' && exit 1",
             "timeout": 5
           }
         ]
@@ -33,7 +33,19 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '⚠️ ORCHESTRATOR MODE: Consider using Task tool with an agent for multi-edits instead of editing directly. If you ARE an agent, proceed with the edit.'",
+            "command": "echo '🚫 ORCHESTRATOR MODE: Direct multi-edits are blocked. Use Task tool with an agent instead.' && exit 1",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "tool_name": "NotebookEdit"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚫 ORCHESTRATOR MODE: Direct notebook edits are blocked. Use Task tool with an agent instead.' && exit 1",
             "timeout": 5
           }
         ]

@@ -1,6 +1,6 @@
 # Orchestrator Mode Plugin
 
-Enforces the orchestrator pattern where the main Claude context delegates file operations to specialized agents instead of editing files directly.
+**Blocks** direct file edits in the main Claude context, enforcing the orchestrator pattern where all file operations are delegated to specialized agents.
 
 ## Why Use This?
 
@@ -12,16 +12,20 @@ When Claude operates as an orchestrator:
 
 ## How It Works
 
-This plugin hooks into `PreToolUse` events for:
-- `Edit` tool
-- `Write` tool
-- `MultiEdit` tool
+This plugin hooks into `PreToolUse` events and **blocks** these tools:
+- `Edit` - blocked with exit code 1
+- `Write` - blocked with exit code 1
+- `MultiEdit` - blocked with exit code 1
+- `NotebookEdit` - blocked with exit code 1
 
-When triggered, it displays a reminder to use the Task tool with an agent instead.
+When triggered, the operation is stopped and you'll see:
+```
+🚫 ORCHESTRATOR MODE: Direct edits are blocked. Use Task tool with an agent instead.
+```
 
-## For Agents
+## Important: Agents Are Not Blocked
 
-If you ARE an agent (spawned via Task tool), you can safely proceed with file edits - the warning is meant for the main orchestrating context only.
+Agents spawned via the Task tool run in their own subprocess context and are **not affected** by this hook. They can edit files normally.
 
 ## Recommended Agents for File Edits
 
@@ -33,16 +37,22 @@ If you ARE an agent (spawned via Task tool), you can safely proceed with file ed
 
 ## Example Usage
 
-Instead of editing directly:
+Instead of editing directly (blocked):
 ```
-# Don't do this in main context
-Edit tool -> file.ts
+Edit tool -> file.ts  ❌ BLOCKED
 ```
 
-Delegate to an agent:
+Delegate to an agent (works):
 ```
 Task tool:
   subagent_type: "general-purpose"
   description: "Edit config file"
-  prompt: "Edit /path/to/file.ts and add X"
+  prompt: "Edit /path/to/file.ts and add X"  ✅ WORKS
+```
+
+## Disabling Temporarily
+
+If you need to disable this plugin temporarily:
+```bash
+claude plugins:disable orchestrator-mode
 ```
