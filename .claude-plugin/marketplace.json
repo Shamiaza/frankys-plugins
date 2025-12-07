@@ -1,0 +1,42 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-plugins",
+  "version": "1.0.0",
+  "description": "Shamiaza's collection of Claude Code plugins for React, Flutter, and NestJS development",
+  "owner": {
+    "name": "Shamiaza",
+    "email": ""
+  },
+  "plugins": [
+    {
+      "name": "react-dev",
+      "description": "React development agents and workflows for building TypeScript React applications with functional programming patterns",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/react-dev",
+      "category": "development"
+    },
+    {
+      "name": "flutter-dev",
+      "description": "Flutter development agents and workflows for building multi-tenant applications with Clean Architecture",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/flutter-dev",
+      "category": "development"
+    },
+    {
+      "name": "nestjs-dev",
+      "description": "NestJS backend development agents and workflows for building enterprise-grade REST APIs",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/nestjs-dev",
+      "category": "development"
+    }
+  ]
+}

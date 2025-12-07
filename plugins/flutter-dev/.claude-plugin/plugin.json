@@ -1,0 +1,8 @@
+{
+  "name": "flutter-dev",
+  "version": "1.0.0",
+  "description": "Flutter development agents and workflows for building multi-tenant applications with Clean Architecture",
+  "author": {
+    "name": "Shamiaza"
+  }
+}

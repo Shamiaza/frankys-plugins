@@ -1,0 +1,8 @@
+{
+  "name": "nestjs-dev",
+  "version": "1.0.0",
+  "description": "NestJS backend development agents and workflows for building enterprise-grade REST APIs",
+  "author": {
+    "name": "Shamiaza"
+  }
+}

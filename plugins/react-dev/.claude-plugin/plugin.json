@@ -1,0 +1,8 @@
+{
+  "name": "react-dev",
+  "version": "1.0.0",
+  "description": "React development agents and workflows for building TypeScript React applications with functional programming patterns",
+  "author": {
+    "name": "Shamiaza"
+  }
+}
