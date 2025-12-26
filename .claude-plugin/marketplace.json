@@ -67,6 +67,16 @@
       },
       "source": "./plugins/rule-creator",
       "category": "productivity"
+    },
+    {
+      "name": "project-memory",
+      "description": "Complete project memory management: modular organization, session notes, architecture sync, and periodic review",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/project-memory",
+      "category": "productivity"
     }
   ]
 }
