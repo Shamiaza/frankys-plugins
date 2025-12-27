@@ -77,6 +77,16 @@
       },
       "source": "./plugins/project-memory",
       "category": "productivity"
+    },
+    {
+      "name": "task-loop",
+      "description": "Long-running task execution loop with agent orchestration. Spawns code agents per task step, runs review/QA after each session, tracks progress in a file.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/task-loop",
+      "category": "productivity"
     }
   ]
 }
