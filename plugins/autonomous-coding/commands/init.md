@@ -1,12 +1,9 @@
+---
+description: "Initialize autonomous coding project with 200+ feature tracking"
+argument-hint: "<app-spec-file> [--project-dir <dir>]"
+---
+
 # /autonomous-coding:init
-
-Initialize a new autonomous coding project with 200+ feature tracking.
-
-## Arguments
-
-$ARGUMENTS = `<app-spec-file> [--project-dir <dir>]`
-
-## Description
 
 This command runs the **Initializer Agent** to set up a long-running autonomous coding project. It transforms your application specification into a comprehensive feature list and project scaffold.
 

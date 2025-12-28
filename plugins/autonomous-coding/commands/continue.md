@@ -1,12 +1,11 @@
+---
+description: "Continue implementing features from the feature list"
+argument-hint: "[--max-iterations N] [--feature <id>]"
+---
+
 # /autonomous-coding:continue
 
-Continue an autonomous coding session, implementing the next features.
-
-## Arguments
-
-$ARGUMENTS = `[--max-iterations N] [--feature <id>]`
-
-## Description
+[[ Ultrathink ]]
 
 This command runs the **Coding Agent** to continue implementing features from the feature list. It handles regression checks, feature implementation, browser testing, and progress tracking.
 

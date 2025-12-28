@@ -1,12 +1,9 @@
+---
+description: "Show current progress of autonomous coding project"
+argument-hint: "[--verbose]"
+---
+
 # /autonomous-coding:status
-
-Show the current status of an autonomous coding project.
-
-## Arguments
-
-$ARGUMENTS = `[--verbose]`
-
-## Description
 
 Displays progress, recent activity, and next steps for the current autonomous coding project.
 

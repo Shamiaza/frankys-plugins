@@ -1,12 +1,8 @@
+---
+description: "Install hooks and rules for session continuity"
+---
+
 # /autonomous-coding:install
-
-Install hooks and rules for autonomous coding session continuity.
-
-## Arguments
-
-$ARGUMENTS = (none)
-
-## Description
 
 Installs PostToolUse hooks and session context rules to `~/.claude/` that help maintain awareness of active autonomous-coding projects across sessions.
 
