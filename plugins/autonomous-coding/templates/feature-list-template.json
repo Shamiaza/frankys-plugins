@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "app_name": "Example Application",
+    "created_at": "2024-01-15T10:00:00Z",
+    "total_features": 10,
+    "passing_features": 0,
+    "tech_stack": {
+      "frontend": "React + TypeScript",
+      "backend": "NestJS",
+      "database": "PostgreSQL"
+    }
+  },
+  "features": [
+    {
+      "id": "F001",
+      "category": "functional",
+      "priority": 1,
+      "description": "Application loads without errors",
+      "steps": [
+        "Navigate to http://localhost:3000",
+        "Verify page renders without blank screen",
+        "Check browser console for errors",
+        "Verify no network request failures"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F002",
+      "category": "functional",
+      "priority": 1,
+      "description": "Home page displays correct title",
+      "steps": [
+        "Navigate to http://localhost:3000",
+        "Verify page title in browser tab",
+        "Verify h1 heading is visible",
+        "Take screenshot for verification"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F003",
+      "category": "functional",
+      "priority": 2,
+      "description": "User can navigate to registration page",
+      "steps": [
+        "Navigate to http://localhost:3000",
+        "Click 'Register' or 'Sign Up' link",
+        "Verify URL changes to /register",
+        "Verify registration form is displayed"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F004",
+      "category": "functional",
+      "priority": 2,
+      "description": "Registration form validates email format",
+      "steps": [
+        "Navigate to /register",
+        "Enter 'invalid-email' in email field",
+        "Click submit or blur email field",
+        "Verify error message about invalid email",
+        "Enter 'valid@email.com'",
+        "Verify error message disappears"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F005",
+      "category": "functional",
+      "priority": 2,
+      "description": "User can successfully register with valid data",
+      "steps": [
+        "Navigate to /register",
+        "Enter 'newuser@example.com' in email field",
+        "Enter 'SecurePass123!' in password field",
+        "Enter 'SecurePass123!' in confirm password field",
+        "Click 'Register' button",
+        "Verify redirect to login or dashboard",
+        "Verify success message or welcome text"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F006",
+      "category": "style",
+      "priority": 5,
+      "description": "Form inputs have consistent styling",
+      "steps": [
+        "Navigate to /register",
+        "Verify all input fields have same border style",
+        "Verify all input fields have same padding",
+        "Verify all input fields have same font size",
+        "Take screenshot for verification"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F007",
+      "category": "accessibility",
+      "priority": 6,
+      "description": "Form inputs have associated labels",
+      "steps": [
+        "Navigate to /register",
+        "Verify each input has a visible label",
+        "Click on label text",
+        "Verify corresponding input receives focus",
+        "Check that labels are properly associated via for/id"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F008",
+      "category": "accessibility",
+      "priority": 6,
+      "description": "Form can be completed using keyboard only",
+      "steps": [
+        "Navigate to /register",
+        "Press Tab to move through form fields",
+        "Verify each field receives visible focus",
+        "Type in values using keyboard only",
+        "Press Enter or Tab to submit button",
+        "Press Enter to submit form",
+        "Verify form submits successfully"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F009",
+      "category": "performance",
+      "priority": 7,
+      "description": "Home page loads in under 3 seconds",
+      "steps": [
+        "Open browser DevTools Network tab",
+        "Navigate to http://localhost:3000",
+        "Measure time to DOMContentLoaded",
+        "Verify total time is under 3000ms",
+        "Check that no request takes over 1000ms"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    },
+    {
+      "id": "F010",
+      "category": "security",
+      "priority": 8,
+      "description": "Password field masks input characters",
+      "steps": [
+        "Navigate to /register",
+        "Type 'TestPassword123' in password field",
+        "Verify characters are displayed as dots or asterisks",
+        "Verify password value is not visible in page source",
+        "Take screenshot showing masked input"
+      ],
+      "passes": false,
+      "verified_at": null,
+      "verified_by_session": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "autonomous-coding",
+  "version": "1.0.0",
+  "description": "Long-running autonomous coding with two-agent pattern, 200+ feature tracking, and browser testing. Adapts Anthropic's autonomous-coding patterns for Claude Code CLI.",
+  "author": "Shamiaza",
+  "repository": "https://github.com/Shamiaza/claude-plugins",
+  "keywords": [
+    "autonomous",
+    "long-running",
+    "feature-tracking",
+    "browser-testing",
+    "two-agent-pattern"
+  ]
+}

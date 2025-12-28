@@ -16,6 +16,7 @@ A collection of Claude Code plugins for modern web and mobile development.
 | project-memory | Project memory structure management (has hooks) |
 | rule-creator | Claude rules file creation |
 | task-loop | Long-running task execution (has hooks + rules) |
+| autonomous-coding | Long-running autonomous coding with 200+ feature tracking (has hooks + rules) |
 
 ### Key Commands
 
@@ -25,6 +26,8 @@ A collection of Claude Code plugins for modern web and mobile development.
 - `/context-management:gather` - Gather context for tasks
 - `/project-memory:init` - Initialize memory structure
 - `/task-loop:loop` - Run long-running task loop with agent orchestration
+- `/autonomous-coding:init` - Initialize autonomous coding project with 200+ features
+- `/autonomous-coding:continue` - Continue implementing features
 
 ### Install Hooks/Rules
 
@@ -33,6 +36,7 @@ Plugins with hooks/rules have install commands to add them to `~/.claude/`:
 - `/orchestrator-mode:install` - Install blocking hooks (prevents direct edits)
 - `/project-memory:install` - Install memory sync reminders
 - `/task-loop:install` - Install task context hooks and rules
+- `/autonomous-coding:install` - Install autonomous coding session hooks and rules
 
 ## Detailed Documentation
 

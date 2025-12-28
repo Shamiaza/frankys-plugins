@@ -1,0 +1,176 @@
+# App Specification: Task Manager Pro
+
+## Overview
+
+A modern task management application that allows users to create, organize, and track their tasks with team collaboration features.
+
+## Tech Stack
+
+- **Frontend**: React 18 + TypeScript + Vite
+- **Backend**: NestJS + TypeORM
+- **Database**: PostgreSQL
+- **Authentication**: JWT with refresh tokens
+- **Styling**: Tailwind CSS
+
+## Core Features
+
+### 1. User Management
+- User registration with email verification
+- User login with remember me option
+- Password reset via email
+- User profile management (name, avatar, preferences)
+- Account deletion with data export
+
+### 2. Task Management
+- Create tasks with title, description, due date
+- Edit and delete tasks
+- Mark tasks as complete/incomplete
+- Set task priority (low, medium, high, urgent)
+- Add tags/labels to tasks
+- Attach files to tasks (images, documents)
+- Task comments and notes
+
+### 3. Organization
+- Create task lists/projects
+- Drag and drop task reordering
+- Filter tasks by status, priority, due date
+- Search tasks by title and description
+- Sort tasks by various criteria
+- Archive completed tasks
+
+### 4. Team Collaboration
+- Invite team members to projects
+- Assign tasks to team members
+- Real-time updates when tasks change
+- Activity feed showing recent actions
+- @mentions in comments
+
+### 5. Notifications
+- Email notifications for task assignments
+- In-app notifications for updates
+- Reminder notifications before due dates
+- Customizable notification preferences
+
+## UI Requirements
+
+### Layout
+- Responsive design (mobile, tablet, desktop)
+- Sidebar navigation on desktop
+- Bottom navigation on mobile
+- Collapsible sidebar option
+
+### Visual Design
+- Clean, minimal aesthetic
+- Dark mode support
+- Consistent spacing (8px grid)
+- Rounded corners on cards (8px radius)
+- Subtle shadows for depth
+
+### Components
+- Task cards with hover preview
+- Modal dialogs for task details
+- Toast notifications for actions
+- Loading skeletons for async content
+- Empty states with helpful messages
+
+## Non-Functional Requirements
+
+### Performance
+- Initial page load under 2 seconds
+- Task list renders 100+ items smoothly
+- No layout shift during load
+- Optimistic UI updates
+
+### Accessibility
+- WCAG 2.1 AA compliance
+- Keyboard navigation support
+- Screen reader compatibility
+- Sufficient color contrast
+- Focus indicators visible
+
+### Security
+- HTTPS only
+- XSS protection
+- CSRF tokens on forms
+- Rate limiting on API
+- Input validation and sanitization
+- Secure password storage (bcrypt)
+
+### Reliability
+- Offline support for viewing tasks
+- Auto-save draft tasks
+- Graceful error handling
+- Data backup and recovery
+
+## API Endpoints
+
+### Authentication
+- POST /auth/register
+- POST /auth/login
+- POST /auth/logout
+- POST /auth/refresh
+- POST /auth/forgot-password
+- POST /auth/reset-password
+
+### Users
+- GET /users/me
+- PATCH /users/me
+- DELETE /users/me
+- POST /users/me/avatar
+
+### Tasks
+- GET /tasks
+- POST /tasks
+- GET /tasks/:id
+- PATCH /tasks/:id
+- DELETE /tasks/:id
+- POST /tasks/:id/comments
+- POST /tasks/:id/attachments
+
+### Projects
+- GET /projects
+- POST /projects
+- GET /projects/:id
+- PATCH /projects/:id
+- DELETE /projects/:id
+- POST /projects/:id/members
+
+## Database Schema
+
+### Users
+- id, email, password_hash, name, avatar_url
+- created_at, updated_at, email_verified_at
+
+### Tasks
+- id, title, description, status, priority
+- due_date, project_id, assignee_id, creator_id
+- created_at, updated_at, completed_at
+
+### Projects
+- id, name, description, owner_id
+- created_at, updated_at, archived_at
+
+### Comments
+- id, task_id, user_id, content
+- created_at, updated_at
+
+### Attachments
+- id, task_id, filename, url, size
+- uploaded_by, created_at
+
+## Success Criteria
+
+The application is complete when:
+1. All user management features work correctly
+2. Tasks can be created, edited, and organized
+3. Team collaboration features function properly
+4. The UI is responsive and accessible
+5. Performance targets are met
+6. Security requirements are satisfied
+
+## Notes
+
+- Prioritize core task functionality first
+- Add collaboration features after basic flow works
+- Test thoroughly on mobile devices
+- Consider internationalization for future

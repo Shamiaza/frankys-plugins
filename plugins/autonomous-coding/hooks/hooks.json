@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f feature_list.json ] && jq -r '\"\\n📊 Autonomous Coding: \" + (.metadata.passing_features // 0 | tostring) + \"/\" + (.metadata.total_features // 0 | tostring) + \" features passing\"' feature_list.json 2>/dev/null || true",
+            "timeout": 3
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f feature_list.json ] && [ -f claude-progress.txt ] && echo '\\n📝 Remember: Update feature_list.json and commit changes' || true",
+            "timeout": 2
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f feature_list.json ] && echo '\\n🔄 Autonomous coding active. Check progress: /autonomous-coding:status' || true",
+            "timeout": 2
+          }
+        ]
+      }
+    ]
+  }
+}
