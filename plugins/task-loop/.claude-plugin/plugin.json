@@ -1,6 +1,6 @@
 {
   "name": "task-loop",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Long-running task execution loop with agent orchestration. Spawns code agents per task step, runs review/QA after each session, tracks progress in a file. Resumes from last checkpoint on context exhaustion.",
   "author": {
     "name": "Shamiaza"
