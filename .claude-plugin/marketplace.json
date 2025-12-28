@@ -87,6 +87,16 @@
       },
       "source": "./plugins/task-loop",
       "category": "productivity"
+    },
+    {
+      "name": "autonomous-coding",
+      "description": "Long-running autonomous coding with two-agent pattern, 200+ feature tracking, and browser testing. Adapts Anthropic's autonomous-coding patterns for Claude Code CLI.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Shamiaza"
+      },
+      "source": "./plugins/autonomous-coding",
+      "category": "productivity"
     }
   ]
 }
