@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: add install/uninstall commands to plugins with hooks\n\nEach plugin now has its own install command to add hooks/rules to ~/.claude/:\n- /orchestrator-mode:install - blocking hooks \\(prevents direct edits\\)\n- /project-memory:install - memory sync reminders\n- /task-loop:install - task context hooks and rules\n\nAlso adds project documentation and memory structure.\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(claude plugins:update:*)",
+      "Bash(claude plugins:remove:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)"
+    ]
+  }
+}
